@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { PensamentoService } from '../pensamento.service';
-import { Pensamento } from '../pensamento/pensamento';
+import { Pensamento } from '../pensamento';
 
 @Component({
   selector: 'app-criar-pensamento',
@@ -29,7 +29,8 @@ export class CriarPensamentoComponent implements OnInit {
         Validators.required,
         Validators.minLength(3)
       ])],
-      modelo: ['modelo1']
+      modelo: ['modelo1'],
+      favorito: [ false ]
     })
   }
 
